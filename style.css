@@ -1,0 +1,325 @@
+@import url(https://db.onlinewebfonts.com/c/88d114dba578a3672ae67cd3d8a9dcf1?family=Fight+Kick+Demo);
+body{
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    color: #000;
+    list-style: none;
+
+}
+
+.inner-conatiner {
+    background: url('assets/hero.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 3% 0 3%;
+}
+
+.lang-toggle {
+    position: relative;
+}
+
+.inner-content {
+    position: absolute;
+    width: 100px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    left: -20px;
+    top: 45px;
+}
+
+.inner-content li {
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: 200;
+}
+
+.inner-l {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle {
+    transform: rotate(180deg);
+
+}
+
+ol.ol {
+    display: flex;
+    flex-direction: column;
+}
+
+.ol li:first-child {
+    border-bottom: 1px solid #fff;
+}
+
+.content {
+    position: absolute;
+    top: 39%;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.search {
+    padding-top: 15px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 5px 15px;
+    width: 420px;
+    height: 71px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.search-icon svg,
+.mic-icon svg {
+    fill: white;
+}
+
+.search-icon,
+.mic-icon {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon img,
+.mic-icon img {
+    width: 30px;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.middle-text-conatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    gap: 50px;
+
+}
+
+.middle-text-conatiner span.popins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.kick-hero {
+    font-family: "Fight Kick Demo";
+    font-weight: 400;
+    letter-spacing: 5.5px;
+    color: #FFFFFF;
+    font-size: 180px;
+}
+
+.kick {
+    font-family: "Fight Kick Demo";
+    font-weight: 400;
+    letter-spacing: 5.5px;
+    font-size: 100px;
+    color: #CBD5E1;
+
+}
+
+.journey-section {
+    position: relative;
+    padding: 0 100px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.image-conatiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image {
+    position: relative;
+    display: inline-block;
+
+}
+
+.overlay-card {
+    position: absolute;
+    display: none;
+    /* Initially hidden */
+    background-color: #FFFFFF;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 200%;
+    height: 393px;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translateY(10px);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+.overlay-card .inner{
+    display: flex;
+    gap: 20px;
+}
+
+.image:hover .overlay-card {
+    display: block;
+}
+
+.image:nth-child(n+5) .overlay-card {
+    top: -50%;
+}
+
+.image:nth-child(4n) .overlay-card {
+    left: -50%;
+    max-width: 150%;
+}
+
+.overlay-card .left .logos-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+}
+.left{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    width: 35%;
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+}
+.wi{
+    max-width: 200px;
+    height: 100px;
+    object-fit:contain;
+}
+.slides {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+}
+.text{
+    font-size: 20px;
+    padding-top: 20%;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: left 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+.bullets {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bullet.active {
+    background-color: black;
+}
+
+@media screen and (max-width:768px) {
+    .kick-hero{
+        font-size: 50px;
+    }
+    img{
+        max-width: 100%;
+    }
+    .search-container{
+        width: 100%;
+    }
+    .kick{
+        font-size: 4rem;
+    }
+    .journey-section{
+        padding: 0 20px;
+    }
+    .overlay-card{
+        width: 90%;
+        left: 50%;
+        margin: auto;
+        transform: translate(-50%,-50%);
+        height: unset;
+        top: 50%;
+    }
+    .overlay-card .inner{
+        flex-direction: column;
+    }
+    .logos-top{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+.image:hover .overlay-card{
+
+    box-shadow: 10px 10px 15px rgba(0.8, 0.8, 0, 0.2);
+}
+}
